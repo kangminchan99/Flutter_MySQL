@@ -4,6 +4,20 @@
         android:label="kakaomap"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <activity 
+    android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+    android:exported="true">
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        
+        <!-- Redirect URI: "kakao${NATIVE_APP_KEY}://oauth" -->
+        <data android:host="oauth"
+                android:scheme="kakao0bbb8627599c1198a2cd41317f240032" />
+    </intent-filter>
+</activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
