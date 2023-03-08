@@ -15,14 +15,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          // ?? - 널값이면 빈값
-          Image.network(
-              viewModel.user?.kakaoAccount?.profile?.profileImageUrl ?? ''),
-          Text('${viewModel.isLogined}'),
-          Center(
-            child: Row(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
                     onPressed: () async {
@@ -30,6 +28,7 @@ class _HomePageState extends State<HomePage> {
                       setState(() {});
                     },
                     child: const Text('kakaoLogin')),
+                const SizedBox(width: 10),
                 ElevatedButton(
                     onPressed: () async {
                       await viewModel.logout();
@@ -37,8 +36,9 @@ class _HomePageState extends State<HomePage> {
                     child: const Text('kakaoLogout'))
               ],
             ),
-          ),
-        ],
+            Text('${viewModel.isLogined}'),
+          ],
+        ),
       ),
     );
   }
