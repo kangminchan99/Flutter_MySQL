@@ -4,7 +4,6 @@ import 'homepage.dart';
 
 void main() {
   runApp(const MyApp());
-  KakaoContext.clientId = '0bbb8627599c1198a2cd41317f240032';
 }
 
 class MyApp extends StatelessWidget {
