@@ -25,13 +25,14 @@ class _HomePageState extends State<HomePage> {
                 ElevatedButton(
                     onPressed: () async {
                       await viewModel.login();
-                      // setState(() {});
+                      setState(() {});
                     },
                     child: const Text('kakaoLogin')),
                 const SizedBox(width: 10),
                 ElevatedButton(
                     onPressed: () async {
                       await viewModel.logout();
+                      setState(() {});
                     },
                     child: const Text('kakaoLogout'))
               ],
