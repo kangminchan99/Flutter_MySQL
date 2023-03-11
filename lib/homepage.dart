@@ -15,19 +15,22 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
+                    style:
+                        ElevatedButton.styleFrom(backgroundColor: Colors.black),
                     onPressed: () async {
                       await viewModel.login();
                       setState(() {});
                     },
-                    child: const Text('kakaoLogin')),
+                    child: Image.asset('assets/kakao.png')),
                 const SizedBox(width: 10),
                 ElevatedButton(
                     onPressed: () async {
