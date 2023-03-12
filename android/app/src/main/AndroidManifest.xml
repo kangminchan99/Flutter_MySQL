@@ -7,11 +7,12 @@
         android:icon="@mipmap/ic_launcher">
 
 
-    <application
+    <!-- <Application
         Android:usesCleartextTraffic="true"
-    >
+    > -->
     
     <!-- 카카오 맵 추가 -->
+
     <meta-data android:name="com.kakao.sdk.AppKey" android:value="kakao0bbb8627599c1198a2cd41317f240032"/>
 
     <!-- 카카오 로그인 커스텀 URL 스킴 설정 -->

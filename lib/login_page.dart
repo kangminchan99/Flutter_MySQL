@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:kakao_flutter_sdk/kakao_flutter_sdk_story.dart';
+import 'package:kakaomap/main_page.dart';
 import 'package:kakaomap/main_view_model.dart';
 import 'package:kakaomap/utils/kakao_login.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _LoginPageState extends State<LoginPage> {
   final viewModel = MainViewModel(KakaoLogin());
   @override
   Widget build(BuildContext context) {
@@ -28,6 +29,8 @@ class _HomePageState extends State<HomePage> {
                         ElevatedButton.styleFrom(backgroundColor: Colors.black),
                     onPressed: () async {
                       await viewModel.login();
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => MainPage()));
                       setState(() {});
                     },
                     child: Image.asset('assets/kakao.png')),
