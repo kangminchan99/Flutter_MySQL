@@ -28,13 +28,15 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Main')),
-      body: Center(
-        child: SizedBox(
-          width: 300,
-          height: 200,
-          child: KakaoMap(initialCameraPosition: _cameraPosition),
+      appBar: AppBar(
+        title: const Text(
+          'Main',
+          style: TextStyle(color: Colors.white),
         ),
+        backgroundColor: Colors.black,
+      ),
+      body: Center(
+        child: KakaoMap(initialCameraPosition: _cameraPosition),
       ),
     );
   }
