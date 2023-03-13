@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kakao_flutter_sdk/kakao_flutter_sdk_story.dart';
 import 'package:kakaomap/login_page.dart';
+import 'package:kakaomap/main_page.dart';
 
 void main() {
   KakaoSdk.init(nativeAppKey: '0bbb8627599c1198a2cd41317f240032');
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      home: const MainPage(),
     );
   }
 }
